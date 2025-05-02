@@ -2,4 +2,20 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <!-- Futuristic black and yellow color scheme -->
+    <color name="primary_dark">#121212</color>
+    <color name="primary_black">#1E1E1E</color>
+    <color name="secondary_black">#262626</color>
+    <color name="accent_yellow">#FFD700</color>
+    <color name="bright_yellow">#FFFF00</color>
+    <color name="dark_yellow">#B8860B</color>
+    <color name="neon_yellow">#DFFF00</color>
+    
+    <!-- Gradient colors -->
+    <color name="gradient_start">#121212</color>
+    <color name="gradient_mid">#1E1E1E</color>
+    <color name="gradient_end">#262626</color>
+    <color name="yellow_gradient_start">#FFD700</color>
+    <color name="yellow_gradient_end">#B8860B</color>
 </resources>

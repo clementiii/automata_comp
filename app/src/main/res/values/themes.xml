@@ -1,9 +1,45 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.AutomataComp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <!-- Base application theme with fixed colors (not affected by system theme) -->
+    <style name="Base.Theme.AutomataComp" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Primary brand colors -->
+        <item name="colorPrimary">@color/accent_yellow</item>
+        <item name="colorPrimaryVariant">@color/dark_yellow</item>
+        <item name="colorOnPrimary">@color/primary_black</item>
+        
+        <!-- Secondary brand colors -->
+        <item name="colorSecondary">@color/neon_yellow</item>
+        <item name="colorSecondaryVariant">@color/bright_yellow</item>
+        <item name="colorOnSecondary">@color/primary_black</item>
+        
+        <!-- Status bar and navigation bar colors -->
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        
+        <!-- Background colors -->
+        <item name="android:windowBackground">@color/primary_black</item>
+        <item name="colorSurface">@color/secondary_black</item>
+        <item name="colorOnSurface">@color/accent_yellow</item>
+        
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/accent_yellow</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        
+        <!-- Disable force dark mode -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 
     <style name="Theme.AutomataComp" parent="Base.Theme.AutomataComp" />
+    
+    <!-- Navigation drawer styles -->
+    <style name="Widget.AutomataComp.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemTextColor">@color/accent_yellow</item>
+        <item name="itemIconTint">@color/accent_yellow</item>
+        <item name="android:background">@color/primary_black</item>
+    </style>
+    
+    <!-- Custom styles for animations -->
+    <style name="FadeAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
 </resources>
