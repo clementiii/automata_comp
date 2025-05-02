@@ -6,4 +6,6 @@
     <string name="settings">Settings</string>
     <string name="about">About</string>
     <string name="app_slogan">Futuristic Design</string>
+    <string name="pascal_triangle">Pascal\'s Triangle</string>
+    <string name="pascal_triangle_title">Pascal\'s Triangle</string>
 </resources>

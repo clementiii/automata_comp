@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_tribonacci).setOnClickListener(v -> startActivityWithAnim(TribonacciActivity.class));
         findViewById(R.id.btn_collatz).setOnClickListener(v -> startActivityWithAnim(CollatzActivity.class));
         findViewById(R.id.btn_euclidean).setOnClickListener(v -> startActivityWithAnim(EuclideanActivity.class));
+        findViewById(R.id.btn_pascal_triangle).setOnClickListener(v -> startActivityWithAnim(PascalTriangleActivity.class));
     }
 
     private void startActivityWithAnim(Class<?> activityClass) {
