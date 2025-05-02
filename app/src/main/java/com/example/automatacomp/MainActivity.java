@@ -3,7 +3,6 @@ package com.example.automatacomp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
@@ -100,18 +99,39 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks
         int id = item.getItemId();
+        Intent intent = null;
         
+        // Handle navigation based on selected item
         if (id == R.id.nav_home) {
             // Already on home screen, just close drawer
             Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_settings) {
-            // Launch settings activity with animation
-            Intent intent = new Intent(this, SettingsActivity.class);
-            startActivity(intent);
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        } else if (id == R.id.nav_about) {
-            // Launch about activity with animation
-            Intent intent = new Intent(this, AboutActivity.class);
+        } 
+        // Algorithm activities
+        else if (id == R.id.nav_fibonacci) {
+            intent = new Intent(this, FibonacciActivity.class);
+        }
+        else if (id == R.id.nav_collatz) {
+            intent = new Intent(this, CollatzActivity.class);
+        }
+        else if (id == R.id.nav_euclidean) {
+            intent = new Intent(this, EuclideanActivity.class);
+        }
+        else if (id == R.id.nav_lucas) {
+            intent = new Intent(this, LucasActivity.class);
+        }
+        else if (id == R.id.nav_tribonacci) {
+            intent = new Intent(this, TribonacciActivity.class);
+        }
+        // Other activities
+        else if (id == R.id.nav_settings) {
+            intent = new Intent(this, SettingsActivity.class);
+        } 
+        else if (id == R.id.nav_about) {
+            intent = new Intent(this, AboutActivity.class);
+        }
+        
+        // Start activity if intent was created
+        if (intent != null) {
             startActivity(intent);
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         }

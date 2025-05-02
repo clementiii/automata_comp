@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         
+        <!-- Settings and About activities -->
         <activity
             android:name=".SettingsActivity"
             android:parentActivityName=".MainActivity"
@@ -33,6 +34,52 @@
         
         <activity
             android:name=".AboutActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AutomataComp">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        
+        <!-- Algorithm activities -->
+        <activity
+            android:name=".FibonacciActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AutomataComp">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        
+        <activity
+            android:name=".CollatzActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AutomataComp">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        
+        <activity
+            android:name=".EuclideanActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AutomataComp">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        
+        <activity
+            android:name=".LucasActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AutomataComp">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        
+        <activity
+            android:name=".TribonacciActivity"
             android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.AutomataComp">
             <meta-data

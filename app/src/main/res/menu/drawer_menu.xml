@@ -5,6 +5,32 @@
             android:id="@+id/nav_home"
             android:icon="@android:drawable/ic_menu_compass"
             android:title="Home" />
+        
+        <item android:title="Algorithms">
+            <menu>
+                <item
+                    android:id="@+id/nav_fibonacci"
+                    android:icon="@android:drawable/ic_menu_sort_by_size"
+                    android:title="Fibonacci Sequence" />
+                <item
+                    android:id="@+id/nav_collatz"
+                    android:icon="@android:drawable/ic_menu_crop"
+                    android:title="Collatz Sequence" />
+                <item
+                    android:id="@+id/nav_euclidean"
+                    android:icon="@android:drawable/ic_menu_view"
+                    android:title="Euclidean Algorithm" />
+                <item
+                    android:id="@+id/nav_lucas"
+                    android:icon="@android:drawable/ic_menu_sort_by_size"
+                    android:title="Lucas Sequence" />
+                <item
+                    android:id="@+id/nav_tribonacci"
+                    android:icon="@android:drawable/ic_menu_slideshow"
+                    android:title="Tribonacci Sequence" />
+            </menu>
+        </item>
+        
         <item
             android:id="@+id/nav_settings"
             android:icon="@android:drawable/ic_menu_preferences"
