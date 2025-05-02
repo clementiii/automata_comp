@@ -92,14 +92,13 @@ public class FibonacciActivity extends AppCompatActivity {
             BigInteger a = BigInteger.ZERO;
             BigInteger b = BigInteger.ONE;
             
-            result.append(a).append(" ").append(b).append(" ");
+            result.append(a).append(", ").append(b);
             
             for (int i = 2; i < n; i++) {
                 BigInteger next = a.add(b);
-                result.append(next).append(" ");
+                result.append(", ").append(next);
                 a = b;
                 b = next;
-                
                 // Add line break for better readability
                 if ((i + 1) % 5 == 0) {
                     result.append("\n");

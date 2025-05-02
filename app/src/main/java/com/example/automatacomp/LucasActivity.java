@@ -91,11 +91,11 @@ public class LucasActivity extends AppCompatActivity {
             BigInteger a = BigInteger.valueOf(2);
             BigInteger b = BigInteger.valueOf(1);
             
-            result.append(a).append(" ").append(b).append(" ");
+            result.append(a).append(", ").append(b);
             
             for (int i = 2; i < n; i++) {
                 BigInteger next = a.add(b);
-                result.append(next).append(" ");
+                result.append(", ").append(next);
                 a = b;
                 b = next;
                 

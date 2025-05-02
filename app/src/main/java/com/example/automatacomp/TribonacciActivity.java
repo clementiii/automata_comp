@@ -92,15 +92,14 @@ public class TribonacciActivity extends AppCompatActivity {
             BigInteger b = BigInteger.ONE;
             BigInteger c = BigInteger.ONE;
             
-            result.append(a).append(" ").append(b).append(" ").append(c).append(" ");
+            result.append(a).append(", ").append(b).append(", ").append(c);
             
             for (int i = 3; i < n; i++) {
                 BigInteger next = a.add(b).add(c);
-                result.append(next).append(" ");
+                result.append(", ").append(next);
                 a = b;
                 b = c;
                 c = next;
-                
                 // Add line break for better readability
                 if ((i + 1) % 5 == 0) {
                     result.append("\n");
