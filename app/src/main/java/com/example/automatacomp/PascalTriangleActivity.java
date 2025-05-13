@@ -56,24 +56,45 @@ public class PascalTriangleActivity extends AppCompatActivity {
             return;
         }
         try {
-            int rows = Integer.parseInt(input);
-            if (rows < 1) {
-                inputLayout.setError("Number must be >= 1");
+            int n = Integer.parseInt(input);
+            if (n < 1) {
+                inputLayout.setError("Number must be greater than or equal to 1");
                 return;
             }
             inputLayout.setError(null);
-            StringBuilder triangle = new StringBuilder();
+            
+            // For input n, we need to show n+1 rows (rows 0 to n inclusive)
+            // so for n=1, we show rows 0 and 1 (i.e., 1 and 1 1)
+            int rows = n + 1;
+            
+            // Build triangle data first
+            int[][] triangle = new int[rows][];
+            int maxNum = 1;
             for (int i = 0; i < rows; i++) {
-                // Add leading spaces for triangle shape
-                for (int s = 0; s < rows - i - 1; s++) triangle.append("  ");
-                int num = 1;
-                for (int j = 0; j <= i; j++) {
-                    triangle.append(num).append("   ");
-                    num = num * (i - j) / (j + 1);
+                triangle[i] = new int[i + 1];
+                triangle[i][0] = triangle[i][i] = 1;
+                for (int j = 1; j < i; j++) {
+                    triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
+                    if (triangle[i][j] > maxNum) maxNum = triangle[i][j];
                 }
-                triangle.append("\n");
             }
-            resultTextView.setText(triangle.toString());
+            
+            // Determine width for each number
+            int numWidth = Integer.toString(maxNum).length() + 2;
+            StringBuilder sb = new StringBuilder();
+            
+            // Explain the output
+            sb.append("Pascal's Triangle for n=").append(n).append(":\n\n");
+            
+            for (int i = 0; i < rows; i++) {
+                // Leading spaces for triangle shape
+                for (int s = 0; s < rows - i - 1; s++) sb.append(" ".repeat(numWidth / 2));
+                for (int j = 0; j <= i; j++) {
+                    sb.append(String.format("%" + numWidth + "d", triangle[i][j]));
+                }
+                sb.append("\n");
+            }
+            resultTextView.setText(sb.toString());
         } catch (NumberFormatException e) {
             inputLayout.setError("Invalid number format");
         }
